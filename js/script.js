@@ -30,7 +30,7 @@ function login() {
         document.body.classList.add('saindo')
 
         setTimeout(() => {
-            window.location.href = './home.html'
+            window.location.href = '/html/home.html'
         }, 800)
 
     } else {

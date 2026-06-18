@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jurassic Park Quiz</title>
+    <title>Jurassic Park Quiz - Fase 3</title>
 
- <link rel="stylesheet" href="/css/quiz.css">
+    <link rel="stylesheet" href="/css/quiz.css">
 
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -18,13 +18,13 @@
         <div class="top-bar">
 
             <a href="home.html" class="voltar">
-                ← Home
+                ← 
             </a>
 
             <div class="progresso-box">
 
                 <span id="progressText">
-                    10%
+                    80%
                 </span>
 
                 <div class="progresso">
@@ -42,14 +42,11 @@
         <!-- Conteúdo -->
         <main>
 
-            <h1>
-                Jurassic Park Quiz
-            </h1>
 
             <div class="question-box">
 
                 <p id="step">
-                    Pergunta 1 de 10
+                    Pergunta 8 de 10
                 </p>
 
                 <h2 id="question">
@@ -58,9 +55,7 @@
 
             </div>
 
-            <div id="answers">
-
-            </div>
+            <div id="answers"></div>
 
             <button id="nextBtn">
                 Próxima →
@@ -70,15 +65,15 @@
 
     </div>
 
-    <script src="questions.js"></script>
+    <script src="/js/questions.js"></script>
 
-<script>
-const PAGE_START = 3;
-const PAGE_END = 7;
-const NEXT_PAGE = "quiz3.html";
-</script>
+    <script>
+        const PAGE_START = 7;
+        const PAGE_END = 10;
+        const NEXT_PAGE = "/html/resultado.html";
+    </script>
 
-<script src="quiz_engine.js"></script>
+    <script src="/js/quiz_engine.js"></script>
 
 </body>
 </html>

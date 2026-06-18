@@ -3,5 +3,5 @@ let user = JSON.parse(
 )
 
 if(!user){
-    window.location.href = 'index.html'
+    window.location.href = '/html/index.html'
 }

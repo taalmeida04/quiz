@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jurassic Park Login</title>
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
+
 <body>
 
     <div class="overlay">
@@ -14,42 +19,56 @@
 
             <img src="img/image (1).png" alt="Jurassic Park" class="logo">
 
-            <h2>Faça login para continuar</h2>
+            <div class="login-card">
 
-            <input
-                type="email"
-                id="exampleFormControlInput1"
-                placeholder="E-mail"
-            >
+                <h1>ACESSO À ILHA NUBLAR</h1>
 
-            <input
-                type="password"
-                id="inputPassword"
-                placeholder="Senha"
-            >
+                <p class="subtitulo">
+                    Entre com suas credenciais para iniciar sua missão de sobrevivência.
+                </p>
+            
+                    <input type="email" id="exampleFormControlInput1" placeholder="E-mail">
+                
+                <input type="password" id="inputPassword" placeholder="Senha">
 
-            <button class="btn">Login</button>
+                <button class="btn">
+                    Fazer Login
+                </button>
+
+                <div class="cadastro">
+                    <p>Não possui conta?</p>
+                    <a href="#">Criar Conta</a>
+                </div>
+
+            </div>
 
         </div>
 
         <div class="info-box">
-            <h3>VOCÊ CONSEGUE ESCAPAR DE JURASSIC PARK?</h3>
+
+            <h3>PROTOCOLO DE EMERGÊNCIA</h3>
 
             <p>
                 Uma falha elétrica atingiu a Ilha Nublar.
-                As cercas de contenção foram desligadas,
-                os sistemas de segurança estão fora de controle
-                e os dinossauros estão soltos.
+                As cercas de contenção foram desligadas
+                e dinossauros perigosos estão soltos.
             </p>
 
             <p>
-                Agora tudo depende das suas decisões.
+                Sua sobrevivência dependerá das decisões
+                tomadas durante a missão.
             </p>
+
+            <p class="alerta">
+                ⚠️ Pense antes de agir.
+            </p>
+
         </div>
 
     </div>
 
-    <script src="script.js"></script>
+    <script src="/js/script.js"></script>
 
 </body>
+
 </html>

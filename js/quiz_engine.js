@@ -4,7 +4,7 @@ let user = JSON.parse(
 )
 
 if(!user){
-    window.location.href = "index.html"
+    window.location.href = " /html/index.html"
 }
 
 // Pontuação salva
@@ -136,5 +136,9 @@ nextBtn.addEventListener(
     }
 
 })
+sessionStorage.setItem(
+    "score",
+    score
+)
 
 loadQuestion()

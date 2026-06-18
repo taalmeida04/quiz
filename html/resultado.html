@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado Final</title>
+
+    <link rel="stylesheet" href="/css/resultado.css">
+</head>
+<body>
+
+    <div class="container">
+
+
+
+      
+        
+
+        <div class="painel">
+
+            <div class="grafico-circular">
+
+                <div class="circle">
+                    <div class="inner-circle">
+                        <span id="percentual">
+                            0%
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="info">
+
+                <h2 id="resultado"></h2>
+
+                <div class="cards">
+
+                    <div class="card">
+                        <span class="numero"
+                        id="acertos">
+                        0
+                        </span>
+
+                        <p>Acertos</p>
+                    </div>
+
+                    <div class="card">
+                        <span class="numero"
+                        id="erros">
+                        0
+                        </span>
+
+                        <p>Erros</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button
+        class="btn"
+        onclick="jogarNovamente()">
+        Jogar Novamente
+        </button>
+
+    </div>
+
+    <script src="/js/resultado.js"></script>
+
+</body>
+</html>
