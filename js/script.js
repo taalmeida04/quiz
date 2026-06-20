@@ -1,4 +1,3 @@
-// Seleção dos elementos
 let email = document.querySelector('#exampleFormControlInput1')
 let password = document.querySelector('#inputPassword')
 let btn = document.querySelector('.btn')
@@ -7,33 +6,28 @@ btn.addEventListener('click', login)
 
 function login() {
 
-    let emailValue = email.value
-    let passwordValue = password.value
+    let usuario = JSON.parse(
+        localStorage.getItem("usuarioCadastrado")
+    )
 
-    // Verifica login
+    if (!usuario) {
+        alert("Nenhuma conta cadastrada!")
+        return
+    }
+
     if (
-        emailValue === 'eve@gmail.com' &&
-        passwordValue === '123456'
+        email.value === usuario.email &&
+        password.value === usuario.senha
     ) {
 
-        let user = {
-            email: emailValue,
-            password: passwordValue
-        }
-
         sessionStorage.setItem(
-            'user',
-            JSON.stringify(user)
+            "user",
+            JSON.stringify(usuario)
         )
 
-        // Animação de saída
-        document.body.classList.add('saindo')
-
-        setTimeout(() => {
-            window.location.href = '/html/home.html'
-        }, 800)
+        window.location.href = "/html/home.html"
 
     } else {
-        alert('E-mail ou senha incorretos!')
+        alert("E-mail ou senha incorretos!")
     }
 }

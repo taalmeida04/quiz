@@ -187,11 +187,150 @@ body{
     background:#ff3b3b;
 }
 
-@media(max-width:768px){
+/* TABLET */
+
+@media (max-width:992px){
+
+    .overlay{
+        padding:30px 20px;
+    }
 
     .hero h1{
-        font-size:36px;
+        font-size:46px;
     }
+
+    .card{
+        padding:30px;
+    }
+
+    .card h2{
+        font-size:32px;
+    }
+}
+
+/* CELULAR */
+
+@media (max-width:768px){
+
+    .overlay{
+        padding:20px 15px;
+    }
+
+    .voltar{
+        font-size:24px;
+    }
+
+    .badge{
+        font-size:14px;
+        padding:8px 16px;
+    }
+
+    .hero{
+        text-align:center;
+    }
+
+    .hero h1{
+        font-size:32px;
+        line-height:1.3;
+    }
+
+    .card{
+        padding:25px 20px;
+        border-radius:20px;
+        margin-bottom:40px;
+    }
+
+    .tag{
+        font-size:12px;
+    }
+
+    .card h2{
+        font-size:26px;
+        line-height:1.3;
+    }
+
+    .card p{
+        font-size:15px;
+        line-height:1.8;
+    }
+
+    .devs h2{
+        font-size:28px;
+        margin-bottom:25px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .dev-card{
+        padding:25px 20px;
+    }
+
+    .avatar{
+        width:80px;
+        height:80px;
+        font-size:30px;
+    }
+
+    .dev-card h3{
+        font-size:20px;
+    }
+
+    .dev-card p{
+        font-size:14px;
+    }
+
+    .social a{
+        width:40px;
+        height:40px;
+    }
+}
+
+/* CELULARES PEQUENOS */
+
+@media (max-width:480px){
+
+    .hero h1{
+        font-size:26px;
+    }
+
+    .card{
+        padding:20px 15px;
+    }
+
+    .card h2{
+        font-size:22px;
+    }
+
+    .card p{
+        font-size:14px;
+    }
+
+    .devs h2{
+        font-size:24px;
+    }
+
+    .avatar{
+        width:70px;
+        height:70px;
+        font-size:26px;
+    }
+
+    .dev-card h3{
+        font-size:18px;
+    }
+
+    .social{
+        gap:10px;
+    }
+
+    .social a{
+        width:36px;
+        height:36px;
+    }
+
 
     .card h2{
         font-size:28px;

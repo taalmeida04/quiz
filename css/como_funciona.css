@@ -123,7 +123,6 @@ button{
     padding:16px 50px;
 
     border-radius:40px;
-
     font-size:18px;
     font-weight:600;
 
@@ -137,4 +136,120 @@ button:hover{
 
     box-shadow:
     0 0 25px rgba(255,0,0,.5);
+}
+/* Tablets */
+@media (max-width: 768px){
+
+    .overlay{
+        padding:20px;
+    }
+
+    h1{
+        font-size:38px;
+    }
+
+    .subtitulo{
+        font-size:16px;
+        margin-bottom:35px;
+    }
+
+    .cards{
+        gap:20px;
+    }
+
+    .card{
+        padding:25px;
+    }
+
+    .card i{
+        font-size:40px;
+    }
+
+    .card h2{
+        font-size:22px;
+    }
+
+    button{
+        width:100%;
+        max-width:350px;
+        padding:15px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px){
+
+    .overlay{
+        padding:15px;
+    }
+
+    .voltar{
+        font-size:24px;
+    }
+
+    main{
+        margin:30px auto;
+    }
+
+    h1{
+        font-size:30px;
+        line-height:1.2;
+    }
+
+    .subtitulo{
+        font-size:15px;
+        margin-bottom:30px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+        gap:15px;
+    }
+
+    .card{
+        padding:20px;
+        border-radius:18px;
+    }
+
+    .card i{
+        font-size:35px;
+    }
+
+    .card h2{
+        font-size:20px;
+    }
+
+    .card p{
+        font-size:14px;
+    }
+
+    button{
+        width:100%;
+        padding:14px;
+        font-size:16px;
+    }
+}
+
+/* Telas muito pequenas */
+@media (max-width: 320px){
+
+    h1{
+        font-size:26px;
+    }
+
+    .subtitulo{
+        font-size:14px;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+    .card h2{
+        font-size:18px;
+    }
+
+    .card p{
+        font-size:13px;
+    }
 }

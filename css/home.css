@@ -8,32 +8,42 @@
 }
 
 body {
-    min-height: 80vh;
-    max-width: 100%;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+
     background-image:
         linear-gradient(rgba(0, 0, 0, .25),
             rgba(0, 0, 0, .25)),
         url("/img/home.jpg");
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
     color: white;
 }
 
-header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-}
+    header {
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+
+        padding: 20px 50px;
+    }
+
+
 
 .logo {
     width: 270px;
 }
-nav {
-    display: flex;
-    gap: 50px;
+nav{
+    display:flex;
+    gap:50px;
+
+    margin-left:auto;
+    margin-right:120px; /* afasta do perfil */
 }
 
 nav a {
@@ -41,6 +51,7 @@ nav a {
 
     color: white;
     text-decoration: none;
+
     font-size: 18px;
     font-weight: 600;
 
@@ -48,51 +59,83 @@ nav a {
     padding-bottom: 5px;
 }
 
-/* Linha */
-nav a::after{
-    content:'';
+nav a::after {
+    content: '';
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 3px;
+
+    background: red;
+
+    transition: .3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a.ativo {
+    color: red;
+}
+
+nav a.ativo::after {
+    width: 100%;
+}
+
+.perfil{
     position:absolute;
-    left:0;
-    bottom:0;
-
-    width:0;
-    height:3px;
-
-    background:red;
-
-    transition:0.3s;
+    top:20px;
+    right:40px;
 }
 
-/* Hover */
-nav a:hover::after{
-    width:100%;
+.perfil a {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    gap: 8px;
+
+    text-decoration: none;
 }
 
-/* Página atual */
-nav a.ativo{
-    color:red;
-}
-
-nav a.ativo::after{
-    width:100%;
-}
-.perfil {
+.perfil i {
     width: 55px;
     height: 55px;
+
     border-radius: 50%;
     background: #d9d9d9;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     color: #666;
     font-size: 28px;
-    margin-bottom: 125px;
+}
+
+#nomeUsuario {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+
+    max-width: 100px;
+    text-align: center;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .hero {
     height: 80vh;
+
     display: flex;
     align-items: center;
+
     padding-left: 80px;
     margin-top: -50px;
 }
@@ -127,18 +170,25 @@ nav a.ativo::after{
 
 .btn {
     margin-top: 50px;
+
     height: 50px;
+
     background: #e60000;
     color: white;
+
     border: none;
     border-radius: 50px;
+
     padding: 15px 25px;
+
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
+
     font-size: 20px;
     font-weight: 700;
+
     cursor: pointer;
 }
 
@@ -148,4 +198,154 @@ nav a.ativo::after{
 
 .btn:hover {
     background: #c70000;
+}
+
+/* MENU MOBILE */
+.menu-btn {
+    display: none;
+}
+
+.menu-mobile {
+    display: none;
+}
+
+/* RESPONSIVO */
+@media (max-width:768px) {
+
+    header {
+        padding: 15px 20px;
+        justify-content: flex-start;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .perfil {
+        display: none;
+    }
+
+    .menu-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: fixed;
+        top: 20px;
+        right: 20px;
+
+        width: 50px;
+        height: 50px;
+
+        color: white;
+        font-size: 28px;
+
+        cursor: pointer;
+
+        z-index: 10000;
+    }
+
+    .menu-mobile {
+        display: flex;
+        flex-direction: column;
+
+        position: fixed;
+        top: 0;
+        right: -280px;
+
+        width: 260px;
+        height: 100vh;
+
+        background: #111;
+
+        padding: 90px 20px;
+
+        transition: .3s;
+
+        z-index: 9999;
+    }
+
+    .menu-mobile.ativo {
+        right: 0;
+    }
+
+    .topo-menu {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .topo-menu i {
+        font-size: 45px;
+        color: #e60000;
+        margin-bottom: 10px;
+    }
+
+    .topo-menu h3 {
+        color: white;
+    }
+
+    .menu-mobile a {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        padding: 15px;
+
+        color: white;
+        text-decoration: none;
+
+        border-radius: 10px;
+
+        transition: .3s;
+    }
+
+    .menu-mobile a:hover {
+        background: #e60000;
+    }
+
+    .hero {
+        height: auto;
+
+        justify-content: center;
+        text-align: center;
+
+        padding: 40px 20px;
+        margin-top: 40px;
+    }
+
+    .conteudo {
+        width: 100%;
+    }
+
+    .conteudo h1 {
+        font-size: 28px;
+    }
+
+    .conteudo p {
+        font-size: 16px;
+    }
+
+    .linha {
+        width: 100%;
+        max-width: 280px;
+
+        margin: 20px auto;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+
+        margin: 40px auto 0;
+
+        font-size: 16px;
+    }
+
+    .btn i {
+        font-size: 24px;
+    }
 }

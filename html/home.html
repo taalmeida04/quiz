@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
 
     <header>
@@ -16,16 +18,60 @@
 
         <nav>
             <a href="/html/home.html" class="ativo">Home</a>
-            <a href="/html/como _funciona.html">Como funciona</a>
-            <a href="/html/sobre.html">Sobre o quiz</a>
+            <a href="/html/como_funciona.html">Como funciona</a>
+            <a href="/html/sobre.html">Sobre o Quiz</a>
             <a href="/html/resultado.html">Resultados</a>
         </nav>
 
+        <!-- Perfil Desktop -->
         <div class="perfil">
-            <i class="fa-solid fa-user"></i>
+            <a href="/html/perfil.html">
+                <i class="fa-solid fa-user"></i>
+                <span id="nomeUsuario"></span>
+            </a>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div class="menu-btn" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
         </div>
 
     </header>
+
+    <!-- Sidebar Mobile -->
+    <aside class="menu-mobile" id="menuMobile">
+
+        <div class="topo-menu">
+            <i class="fa-solid fa-user"></i>
+            <h3 id="nomeUsuarioMenu">Usuário</h3>
+        </div>
+
+        <a href="/html/home.html">
+            <i class="fa-solid fa-house"></i>
+            Home
+        </a>
+
+        <a href="/html/como _funciona.html">
+            <i class="fa-solid fa-circle-info"></i>
+            Como funciona
+        </a>
+
+        <a href="/html/sobre.html">
+            <i class="fa-solid fa-book"></i>
+            Sobre o Quiz
+        </a>
+
+        <a href="/html/resultado.html">
+            <i class="fa-solid fa-chart-column"></i>
+            Resultados
+        </a>
+
+        <a href="/html/perfil.html">
+            <i class="fa-solid fa-user"></i>
+            Perfil
+        </a>
+
+    </aside>
 
     <section class="hero">
 
@@ -45,17 +91,39 @@
                 Você está pronto para o desafio?
             </p>
 
-            <button class="btn"
-            onclick="window.location.href='/html/quiz1.html'">
+            <button class="btn" onclick="window.location.href='/html/quiz1.html'">
+
                 Iniciar a missão
                 <i class="fa-solid fa-arrow-right"></i>
+
             </button>
 
         </div>
 
     </section>
 
-    <script src="/js/home.js"></script>
+    <script>
+        let usuario = JSON.parse(
+            localStorage.getItem("usuarioCadastrado")
+        );
+
+        if (usuario) {
+
+            document.getElementById("nomeUsuario").textContent =
+                usuario.nome;
+
+            document.getElementById("nomeUsuarioMenu").textContent =
+                usuario.nome;
+        }
+
+        function toggleMenu() {
+            document
+                .getElementById("menuMobile")
+                .classList
+                .toggle("ativo");
+        }
+    </script>
 
 </body>
+
 </html>
