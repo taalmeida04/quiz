@@ -7,23 +7,27 @@
 
 body{
     min-height:100vh;
+
     background-image:url("img/image.png");
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
-    overflow:hidden;
+
+    overflow-x:hidden;
+
     animation:fadeIn 1s ease;
 }
 
 .overlay{
     width:100%;
     min-height:100vh;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
     padding:0 60px;
 }
-
 
 .login-container{
     width:400px;
@@ -38,19 +42,20 @@ body{
 .login-card{
     background:rgba(0,0,0,.65);
     backdrop-filter:blur(12px);
+
     border:2px solid rgba(255,0,0,.3);
     border-radius:25px;
+
     padding:20px 10px;
+
     box-shadow:
     0 0 30px rgba(255,0,0,.15);
-
 }
 
 .login-card h1{
     color:white;
     font-size:22px;
     margin-bottom:10px;
-
 }
 
 .subtitulo{
@@ -58,20 +63,24 @@ body{
     font-size:14px;
     line-height:1.6;
     margin-bottom:25px;
-
 }
 
 #exampleFormControlInput1,
 #inputPassword{
     width:100%;
     height:58px;
+
     margin-bottom:20px;
-    padding:0 70px;
+    padding:0 25px;
+
     background:rgba(255,255,255,.08);
+
     border:2px solid rgba(255,255,255,.15);
     border-radius:15px;
+
     color:white;
     font-size:16px;
+
     transition:.3s;
 }
 
@@ -83,103 +92,108 @@ body{
 #exampleFormControlInput1:focus,
 #inputPassword:focus{
     outline:none;
+
     border-color:#ff0000;
+
     box-shadow:
     0 0 15px rgba(255,0,0,.6);
-
 }
-
-/* BOTÃO */
 
 .btn{
     width:80%;
     height:50px;
+
     border:none;
     border-radius:15px;
+
     background:
     linear-gradient(
     90deg,
     #a80000,
     #ff1f1f
     );
+
     color:white;
+
     font-size:18px;
     font-weight:bold;
+
     cursor:pointer;
+
     transition:.3s;
+
     margin-top:10px;
 }
 
 .btn:hover{
     transform:translateY(-3px);
+
     box-shadow:
     0 0 25px rgba(255,0,0,.7);
-
 }
-
-
 
 .cadastro{
     margin-top:20px;
     color:white;
-
 }
 
 .cadastro p{
     margin-bottom:8px;
 }
+
 .cadastro a{
     color:#ff4d4d;
     text-decoration:none;
     font-weight:bold;
     transition:.3s;
-
 }
 
 .cadastro a:hover{
     color:white;
     text-decoration:underline;
-
 }
-
-/* INFO BOX */
 
 .info-box{
     width:450px;
     height:350px;
+
     background:rgba(0,0,0,.65);
     backdrop-filter:blur(12px);
+
     border:2px solid rgba(255,0,0,.4);
     border-radius:30px;
+
     color:white;
     text-align:center;
+
     padding:25px;
+
     box-shadow:
     0 0 30px rgba(255,0,0,.15);
-
 }
 
 .info-box h3{
     color:#ff3c3c;
+
     font-size:30px;
     margin-bottom:20px;
-    text-transform:uppercase;
 
+    text-transform:uppercase;
 }
 
 .info-box p{
     font-size:17px;
     line-height:1.8;
     color:#f0f0f0;
-
 }
 
 .alerta{
     margin-top:20px;
+
     color:#ffd000 !important;
+
     font-weight:bold;
     font-size:18px;
-
 }
 
 .saindo{
@@ -195,10 +209,7 @@ body{
     }
 }
 
-
-
 @keyframes fadeIn{
-
     from{
         opacity:0;
         transform:translateY(20px);
@@ -208,30 +219,154 @@ body{
         opacity:1;
         transform:translateY(0);
     }
-
 }
 
+/* TABLETS */
 
+@media (max-width:1000px){
 
-@media(max-width:1000px){
+    body{
+        overflow-y:auto;
+    }
 
     .overlay{
-
         flex-direction:column;
 
         justify-content:center;
 
         gap:30px;
 
-        padding:30px;
+        padding:40px 20px;
+    }
 
+    .login-container{
+        width:100%;
+        max-width:450px;
     }
 
     .info-box{
-
         width:100%;
         max-width:500px;
+        height:auto;
+    }
+}
 
+/* CELULAR */
+
+@media (max-width:768px){
+
+    .overlay{
+        padding:20px 15px;
+        gap:20px;
     }
 
+    .logo{
+        width:220px;
+    }
+
+    .login-container{
+        width:100%;
+    }
+
+    .login-card{
+        width:100%;
+        padding:25px 15px;
+        border-radius:20px;
+    }
+
+    .login-card h1{
+        font-size:20px;
+    }
+
+    .subtitulo{
+        font-size:13px;
+    }
+
+    #exampleFormControlInput1,
+    #inputPassword{
+        height:52px;
+        font-size:15px;
+        padding:0 18px;
+    }
+
+    .btn{
+        width:100%;
+        height:52px;
+        font-size:16px;
+    }
+
+    .cadastro{
+        font-size:14px;
+    }
+
+    .info-box{
+        padding:20px;
+        border-radius:20px;
+    }
+
+    .info-box h3{
+        font-size:22px;
+    }
+
+    .info-box p{
+        font-size:15px;
+        line-height:1.6;
+    }
+
+    .alerta{
+        font-size:16px;
+    }
+}
+
+/* CELULARES PEQUENOS */
+
+@media (max-width:480px){
+
+    .overlay{
+        padding:15px 10px;
+    }
+
+    .logo{
+        width:170px;
+    }
+
+    .login-card{
+        padding:20px 12px;
+    }
+
+    .login-card h1{
+        font-size:17px;
+    }
+
+    .subtitulo{
+        font-size:12px;
+    }
+
+    #exampleFormControlInput1,
+    #inputPassword{
+        height:48px;
+        font-size:14px;
+    }
+
+    .btn{
+        height:48px;
+        font-size:15px;
+    }
+
+    .info-box{
+        padding:18px;
+    }
+
+    .info-box h3{
+        font-size:18px;
+    }
+
+    .info-box p{
+        font-size:13px;
+        line-height:1.5;
+    }
+
+    .alerta{
+        font-size:14px;
+    }
 }
