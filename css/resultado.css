@@ -7,41 +7,30 @@
 
 body{
     min-height:100vh;
-
     background:
     linear-gradient(
         rgba(0,0,0,.75),
         rgba(0,0,0,.75)
     ),
-    url("/img/result.jpg");
-
+    url("/img/img3.jpeg");
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     color:white;
-
     padding:20px;
 }
 
 .container{
     width:900px;
     max-width:100%;
-
     background:rgba(255,255,255,.08);
-
     backdrop-filter:blur(15px);
-
     border:1px solid rgba(255,255,255,.1);
-
     border-radius:30px;
-
     padding:50px;
-
     box-shadow:
     0 20px 50px rgba(0,0,0,.4);
 }
@@ -62,13 +51,10 @@ body{
 .circle{
     width:250px;
     height:250px;
-
     border-radius:50%;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     background:
     conic-gradient(
         #00e676 0deg,
@@ -76,7 +62,6 @@ body{
         rgba(255,255,255,.15) var(--progress),
         rgba(255,255,255,.15) 360deg
     );
-
     box-shadow:
     0 0 30px rgba(0,0,0,.3);
 }
@@ -84,11 +69,8 @@ body{
 .inner-circle{
     width:190px;
     height:190px;
-
     border-radius:50%;
-
     background:#111;
-
     display:flex;
     justify-content:center;
     align-items:center;
@@ -115,22 +97,16 @@ body{
 
 .card{
     flex:1;
-
     background:rgba(255,255,255,.08);
-
     border-radius:20px;
-
     padding:25px;
-
     text-align:center;
 }
 
 .numero{
     display:block;
-
     font-size:40px;
     font-weight:bold;
-
     margin-bottom:10px;
 }
 
@@ -141,32 +117,24 @@ body{
 .btn{
     width:80%;
     height:50px;
-
     border:none;
     border-radius:15px;
-
     background:
     linear-gradient(
         90deg,
         #a80000,
         #ff1f1f
     );
-
     color:white;
-
     font-size:18px;
     font-weight:bold;
-
     cursor:pointer;
-
     transition:.3s;
-
     margin-top:20px;
 }
 
 .btn:hover{
     transform:translateY(-3px);
-
     box-shadow:
     0 0 25px rgba(255,0,0,.7);
 }
@@ -174,85 +142,66 @@ body{
 /* TABLET */
 
 @media (max-width:900px){
-
     .container{
         padding:35px 25px;
     }
-
     .painel{
         flex-direction:column;
         text-align:center;
         gap:35px;
     }
-
     .cards{
         flex-direction:column;
         width:100%;
     }
-
     .circle{
         width:220px;
         height:220px;
     }
-
     .inner-circle{
         width:165px;
         height:165px;
     }
-
     #resultado{
         font-size:28px;
     }
-
     .btn{
         width:100%;
     }
 }
-
 /* CELULAR */
-
 @media (max-width:768px){
-
     body{
         padding:15px;
     }
-
     .container{
         padding:25px 15px;
         border-radius:20px;
     }
-
     .painel{
         gap:25px;
     }
-
     .circle{
         width:180px;
         height:180px;
     }
-
     .inner-circle{
         width:135px;
         height:135px;
     }
-
     #percentual{
         font-size:30px;
     }
-
     #resultado{
         font-size:22px;
         margin-bottom:20px;
     }
-
     .card{
         padding:18px;
     }
-
     .numero{
         font-size:32px;
     }
-
     .card p{
         font-size:14px;
     }
@@ -271,38 +220,30 @@ body{
     .container{
         padding:20px 12px;
     }
-
     .circle{
         width:160px;
         height:160px;
     }
-
     .inner-circle{
         width:120px;
         height:120px;
     }
-
     #percentual{
         font-size:24px;
     }
-
     #resultado{
         font-size:18px;
         line-height:1.4;
     }
-
     .numero{
         font-size:26px;
     }
-
     .card{
         padding:15px;
     }
-
     .card p{
         font-size:13px;
     }
-
     .btn{
         height:45px;
         font-size:14px;
